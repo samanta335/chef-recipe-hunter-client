@@ -5,13 +5,13 @@ import { Button, Container, Nav, Navbar } from "react-bootstrap";
 const Header = () => {
   return (
     <div className="d-flex justify-content-center">
-      <h2 className="mt-5">Bangladeshi's Chef Recipe</h2>
+      <h2 className="mt-5">Bangladeshi Food</h2>
       <Navbar className="mx-5" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#pricing" className="ms-3">
                 Blog
               </Nav.Link>
