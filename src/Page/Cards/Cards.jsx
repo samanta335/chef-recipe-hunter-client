@@ -24,7 +24,7 @@ const Cards = () => {
                   <p className="mb-1 ">Experience: {data.experience}</p>
                   <p className="mb-1">Recipe Number: {data.recipeNumber}</p>
                   <p>
-                    <FaHeart style={{ color: "red" }}></FaHeart> {data.Likes}
+                    <FaHeart style={{ color: "red" }}></FaHeart> {data.Likes}{" "}
                     Likes
                   </p>
                 </Card.Text>
