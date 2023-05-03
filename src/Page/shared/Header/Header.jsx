@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+  console.log(user?.email);
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <div className="d-flex justify-content-center">
       <h2 className="mt-4 text-success">Bangladeshi Food</h2>
@@ -21,7 +31,11 @@ const Header = () => {
                 <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle>
               </Nav.Link>
               <Nav.Link eventKey={2} href="/login">
-                <Button variant="outline-info">Login</Button>
+                {user?.email ? (
+                  <Button onClick={handleLogout}>Logout</Button>
+                ) : (
+                  <Button variant="outline-info">Login</Button>
+                )}
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

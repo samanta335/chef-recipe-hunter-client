@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { FaHeart } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Cards = () => {
   const [allData, setAllData] = useState([]);
@@ -9,7 +10,6 @@ const Cards = () => {
       .then((response) => response.json())
       .then((data) => setAllData(data));
   }, []);
-  console.log(allData);
 
   return (
     <div className="container align-item-center">
@@ -28,7 +28,9 @@ const Cards = () => {
                     Likes
                   </p>
                 </Card.Text>
-                <Button variant="danger">View Recipes Button</Button>
+                <Link to={`/data/${data?.id}`}>
+                  <Button variant="danger">View Recipes Button</Button>
+                </Link>
               </Card.Body>
             </Card>
           </div>

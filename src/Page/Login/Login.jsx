@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { Button } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
   const { loginUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -16,6 +17,7 @@ const Login = () => {
       loginUser(email, password)
         .then((result) => {
           console.log(result.user);
+          navigate("/");
         })
         .catch((error) => {
           console.log(error.message);

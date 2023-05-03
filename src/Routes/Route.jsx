@@ -3,6 +3,8 @@ import Main from "../layouts/Main";
 import Home from "../Page/Home/Home";
 import Login from "../Page/Login/Login";
 import Register from "../Page/Register/Register";
+import PrivateRoute from "./PrivateRoute";
+import ViewRecipe from "../Page/ViewRecipe/ViewRecipe";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: ":id",
+        element: (
+          <PrivateRoute>
+            <ViewRecipe></ViewRecipe>
+          </PrivateRoute>
+        ),
       },
     ],
   },
