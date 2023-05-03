@@ -1,5 +1,5 @@
 import React from "react";
-
+import { FaUserCircle, FaFacebook, FaGithub } from "react-icons/fa";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
@@ -17,7 +17,9 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Nav className="ms-5">
-              <Nav.Link href="#deets"></Nav.Link>
+              <Nav.Link href="#deets">
+                <FaUserCircle style={{ fontSize: "2rem" }}></FaUserCircle>
+              </Nav.Link>
               <Nav.Link eventKey={2} href="#memes">
                 <Button variant="outline-info">Login</Button>
               </Nav.Link>
@@ -27,9 +29,13 @@ const Header = () => {
       </Navbar>
       <div className="border-start ps-2">
         <h5>Login With</h5>
-        <Button variant="outline-success">Login With Facebook</Button>
+        <Button variant="outline-success">
+          <FaFacebook></FaFacebook> Login With Facebook
+        </Button>
         <div className="mt-2 ms-1">
-          <Button variant="outline-secondary">Login With Github</Button>
+          <Button variant="outline-secondary">
+            <FaGithub></FaGithub> Login With Github
+          </Button>
         </div>
       </div>
     </div>

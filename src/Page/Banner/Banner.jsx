@@ -10,7 +10,7 @@ const Banner = () => {
         height: "100vh",
       }}
     >
-      <h1>Traditional Food in Bangladesh</h1>
+      <h1 className="mt-5">Traditional Food in Bangladesh</h1>
       <p className="fw-semibold">
         Traditionally Bengalis at home and abroad eat Panta Bhat (overnight
         steeped rice),
