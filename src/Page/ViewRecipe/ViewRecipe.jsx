@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
-import { FaHeart } from "react-icons/fa";
+import { FaHeart, FaRegStar, FaStar } from "react-icons/fa";
+import { Button, Card } from "react-bootstrap";
+import Rating from "react-rating";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const ViewRecipe = () => {
   const { id } = useParams();
 
@@ -23,7 +28,12 @@ const ViewRecipe = () => {
     method1,
     method2,
     method3,
+    rating,
   } = detailsRecipe;
+  const favorite = () =>
+    toast.success("Favorite Added", {
+      position: toast.POSITION.TOP_CENTER,
+    });
 
   return (
     <div>
@@ -35,7 +45,7 @@ const ViewRecipe = () => {
             alt=""
           />
         </div>
-        <div className="ms-5 ps-5 mt-5">
+        <div className="ms-5 ps-5 mt-5 ">
           <h3>{name}</h3>
           <p className="w-50">{description}</p>
           <p className="mb-1 ">Experience: {experience}</p>
@@ -45,6 +55,94 @@ const ViewRecipe = () => {
           </p>
         </div>
       </div>
+      <div className="mt-5">
+        <h2 className="text-center">Chef's Recipe</h2>
+        <Card className="w-75 mx-auto mt-3 ">
+          <Card.Header>Recipe-1</Card.Header>
+          <Card.Body>
+            <Card.Title>
+              <h4>
+                <span className="fw-semibold">Recipe Name:</span> {recipeName1}
+              </h4>
+            </Card.Title>
+            <Card.Text>
+              <p>
+                <span className="fw-semibold">Ingredients:</span> {ingredients1}
+              </p>
+              <p>
+                <span className="fw-semibold">Method:</span> {method1}
+              </p>
+            </Card.Text>
+            <Rating
+              placeholderRating={rating}
+              readonly
+              emptySymbol={<FaRegStar></FaRegStar>}
+              placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+            ></Rating>
+            <span className="ms-1"> {rating}</span>
+            <Button variant="info" className="ms-5 " onClick={favorite}>
+              <FaHeart style={{ color: "red" }}></FaHeart> Favorite
+            </Button>
+          </Card.Body>
+        </Card>
+        <Card className="w-75 mx-auto mt-3">
+          <Card.Header>Recipe-1</Card.Header>
+          <Card.Body>
+            <Card.Title>
+              <h4>
+                <span className="fw-semibold">Recipe Name:</span> {recipeName2}
+              </h4>
+            </Card.Title>
+            <Card.Text>
+              <p>
+                <span className="fw-semibold">Ingredients:</span> {ingredients2}
+              </p>
+              <p>
+                <span className="fw-semibold">Method:</span> {method2}
+              </p>
+            </Card.Text>
+            <Rating
+              placeholderRating={rating}
+              readonly
+              emptySymbol={<FaRegStar></FaRegStar>}
+              placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+            ></Rating>
+            <span className="ms-1"> {rating}</span>
+            <Button variant="info" className="ms-5 " onClick={favorite}>
+              <FaHeart style={{ color: "red" }}></FaHeart> Favorite
+            </Button>
+          </Card.Body>
+        </Card>
+        <Card className="w-75 mx-auto mt-3">
+          <Card.Header>Recipe-1</Card.Header>
+          <Card.Body>
+            <Card.Title>
+              <h4>
+                <span className="fw-semibold">Recipe Name:</span> {recipeName3}
+              </h4>
+            </Card.Title>
+            <Card.Text>
+              <p>
+                <span className="fw-semibold">Ingredients:</span> {ingredients3}
+              </p>
+              <p>
+                <span className="fw-semibold">Method:</span> {method3}
+              </p>
+            </Card.Text>
+            <Rating
+              placeholderRating={rating}
+              readonly
+              emptySymbol={<FaRegStar></FaRegStar>}
+              placeholderSymbol={<FaStar className="text-warning"></FaStar>}
+            ></Rating>
+            <span className="ms-1"> {rating}</span>
+            <Button variant="info" className="ms-5 " onClick={favorite}>
+              <FaHeart style={{ color: "red" }}></FaHeart> Favorite
+            </Button>
+          </Card.Body>
+        </Card>
+      </div>
+      <ToastContainer></ToastContainer>
     </div>
   );
 };
