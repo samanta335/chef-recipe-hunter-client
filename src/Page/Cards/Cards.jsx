@@ -28,7 +28,7 @@ const Cards = () => {
                     Likes
                   </p>
                 </Card.Text>
-                <Link to={`/data/${data?.id}`}>
+                <Link to={`/data/${data.id}`}>
                   <Button variant="danger">View Recipes Button</Button>
                 </Link>
               </Card.Body>

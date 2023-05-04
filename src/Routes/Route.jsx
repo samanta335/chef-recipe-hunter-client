@@ -24,12 +24,14 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: ":id",
+        path: "/data/:id",
         element: (
           <PrivateRoute>
             <ViewRecipe></ViewRecipe>
           </PrivateRoute>
         ),
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/data/${params.id}`),
       },
     ],
   },
