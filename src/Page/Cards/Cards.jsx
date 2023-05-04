@@ -16,7 +16,7 @@ const Cards = () => {
       <div className="row  ">
         {allData.map((data) => (
           <div key={data.id} className="col mb-3">
-            <Card style={{ width: "18rem" }}>
+            <Card style={{ width: "18rem" }} className="mt-4">
               <Card.Img variant="top" src={data.img} />
               <Card.Body>
                 <Card.Title>{data.name}</Card.Title>

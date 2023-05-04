@@ -34,6 +34,10 @@ const ViewRecipe = () => {
     toast.success("Favorite Added", {
       position: toast.POSITION.TOP_CENTER,
     });
+  // const [available, setAvailable] = useState(false);
+  // const handleAvailable = (event) => {
+  //   setAvailable(event.target.);
+  // };
 
   return (
     <div>
@@ -81,12 +85,13 @@ const ViewRecipe = () => {
             ></Rating>
             <span className="ms-1"> {rating}</span>
             <Button variant="info" className="ms-5 " onClick={favorite}>
-              <FaHeart style={{ color: "red" }}></FaHeart> Favorite
+              <FaHeart style={{ color: "red" }}></FaHeart>
+              Favorite
             </Button>
           </Card.Body>
         </Card>
         <Card className="w-75 mx-auto mt-3">
-          <Card.Header>Recipe-1</Card.Header>
+          <Card.Header>Recipe-2</Card.Header>
           <Card.Body>
             <Card.Title>
               <h4>
@@ -114,7 +119,7 @@ const ViewRecipe = () => {
           </Card.Body>
         </Card>
         <Card className="w-75 mx-auto mt-3">
-          <Card.Header>Recipe-1</Card.Header>
+          <Card.Header>Recipe-3</Card.Header>
           <Card.Body>
             <Card.Title>
               <h4>
