@@ -16,7 +16,7 @@ const Header = () => {
   };
   return (
     <div className="d-flex justify-content-center">
-      <h2 className="mt-4 text-success">Bangladeshi Food</h2>
+      <h2 className="mt-4 text-success fs-1">Chef Hunter</h2>
       <Navbar className="mx-5" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -47,17 +47,6 @@ const Header = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      {/* <div className="border-start ps-2">
-        <h5>Login With</h5>
-        <Button variant="outline-success">
-          <FaFacebook></FaFacebook> Login With Facebook
-        </Button>
-        <div className="mt-2 ms-1">
-          <Button variant="outline-secondary">
-            <FaGithub></FaGithub> Login With Github
-          </Button>
-        </div> */}
-      {/* </div> */}
     </div>
   );
 };
