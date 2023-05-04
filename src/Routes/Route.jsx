@@ -6,6 +6,7 @@ import Register from "../Page/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import ViewRecipe from "../Page/ViewRecipe/ViewRecipe";
 import ErrorPage from "../Page/ErrorPage/ErrorPage";
+import Blog from "../Page/Blog/Blog";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "/login",
