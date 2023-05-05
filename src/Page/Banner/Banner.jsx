@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -17,7 +18,7 @@ const Banner = () => {
           commemorate Pohela Boishakh.
         </p>
         <Link to="/error">
-          <button type="button" class="btn btn-danger px-4 ms-5 mt-2">
+          <button type="button" class="btn btn-danger px-4 ms-2 mt-2">
             Get Start
           </button>
         </Link>
