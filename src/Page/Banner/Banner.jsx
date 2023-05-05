@@ -16,6 +16,11 @@ const Banner = () => {
           steeped rice), Ilish (Hilsa Fish) and varieties of Bhorta to
           commemorate Pohela Boishakh.
         </p>
+        <Link to="/error">
+          <button type="button" class="btn btn-danger px-4 ms-5 mt-2">
+            Get Start
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -38,7 +38,9 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/data/${params.id}`),
+          fetch(
+            `https://chef-recipe-server-side-samanta335.vercel.app/data/${params.id}`
+          ),
       },
     ],
   },

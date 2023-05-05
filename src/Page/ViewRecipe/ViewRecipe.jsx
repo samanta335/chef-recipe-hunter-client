@@ -85,8 +85,7 @@ const ViewRecipe = () => {
             ></Rating>
             <span className="ms-1"> {rating}</span>
             <Button variant="info" className="ms-5 " onClick={favorite}>
-              <FaHeart style={{ color: "red" }}></FaHeart>
-              Favorite
+              <FaHeart style={{ color: "red" }}></FaHeart> Favorite
             </Button>
           </Card.Body>
         </Card>

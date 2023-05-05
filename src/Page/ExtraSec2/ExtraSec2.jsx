@@ -4,7 +4,7 @@ import { Card } from "react-bootstrap";
 const ExtraSec2 = () => {
   const [newData, setNewData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/ExtraData")
+    fetch("https://chef-recipe-server-side-samanta335.vercel.app/ExtraData")
       .then((response) => response.json())
       .then((data) => setNewData(data));
   }, []);

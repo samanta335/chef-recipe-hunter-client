@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Cards = () => {
   const [allData, setAllData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/data")
+    fetch("https://chef-recipe-server-side-samanta335.vercel.app/data")
       .then((response) => response.json())
       .then((data) => setAllData(data));
   }, []);

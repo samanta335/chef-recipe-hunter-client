@@ -3,7 +3,6 @@ import { FaUserCircle } from "react-icons/fa";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { AuthContext } from "../../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
-import ExtraSec1 from "../../ExtraSec1/ExtraSec1";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -39,11 +38,6 @@ const Header = () => {
                   <Button variant="outline-info">Login</Button>
                 )}
               </Nav.Link>
-              <Link to="/error">
-                <button type="button" class="btn btn-danger px-4 ms-5 mt-2">
-                  Get Start
-                </button>
-              </Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
