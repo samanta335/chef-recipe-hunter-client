@@ -11,7 +11,7 @@ const ExtraSec2 = () => {
   return (
     <div className="container align-item-center ">
       <div className="row ">
-        <h2 className="text-center text-danger mb-4">
+        <h2 className="text-center text-danger mt-4 mb-4">
           Famous Food Of Bangladesh
         </h2>
         {newData.map((data) => (

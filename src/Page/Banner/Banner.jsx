@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
-    <div className="d-flex ms-5 mt-3 mb-5 bg-light">
+    <div className="d-flex ms-5 mt-5 mb-5 ">
       <img
         className="w-50 rounded"
-        src="https://images.squarespace-cdn.com/content/v1/5ea5f3913b0ccf06d0ec2563/1591994650693-0M94UIW15OMU0A4TZK0R/1.jpg"
+        src="https://www.bengalsaroma.com/wp-content/uploads/2018/03/qq.png"
         alt=""
       />
 
@@ -18,8 +18,11 @@ const Banner = () => {
           commemorate Pohela Boishakh.
         </p>
         <Link to="/error">
-          <button type="button" class="btn btn-danger px-4 ms-2 mt-2">
-            Get Start
+          <button
+            type="button"
+            className="fw-semibold btn btn-danger px-4 ms-2 mt-2"
+          >
+            Let's See
           </button>
         </Link>
       </div>

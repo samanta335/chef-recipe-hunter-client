@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import { Button, Container, Nav, Navbar } from "react-bootstrap";
 import { AuthContext } from "../../../Provider/AuthProvider";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -16,13 +16,22 @@ const Header = () => {
   };
   return (
     <div className="d-flex justify-content-center">
-      <h2 className="mt-4 text-success fs-1">Chef Hunter</h2>
+      <h2 className="mt-3 text-success fs-1">Chef Hunter</h2>
       <Navbar className="mx-5" collapseOnSelect expand="lg">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mx-auto">
-              <Nav.Link href="/">Home</Nav.Link>
+              <NavLink
+                className="mt-2"
+                to="/"
+                style={(isActive) => ({
+                  color: isActive ? "purple" : "blue",
+                })}
+              >
+                Home
+              </NavLink>
+
               <Nav.Link href="/blog" className="ms-3">
                 Blog
               </Nav.Link>
