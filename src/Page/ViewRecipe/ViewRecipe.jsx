@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { FaHeart, FaRegStar, FaStar } from "react-icons/fa";
 import { Button, Card } from "react-bootstrap";
@@ -34,10 +34,13 @@ const ViewRecipe = () => {
     toast.success("Favorite Added", {
       position: toast.POSITION.TOP_CENTER,
     });
-  // const [available, setAvailable] = useState(false);
-  // const handleAvailable = (event) => {
-  //   setAvailable(event.target.);
-  // };
+  let btnRef = useRef();
+
+  const onBtnClick = (e) => {
+    if (btnRef.current) {
+      btnRef.current.setAttribute("disabled", "disabled");
+    }
+  };
 
   return (
     <div>
@@ -84,7 +87,14 @@ const ViewRecipe = () => {
               placeholderSymbol={<FaStar className="text-warning"></FaStar>}
             ></Rating>
             <span className="ms-1"> {rating}</span>
-            <Button variant="info" className="ms-5 " onClick={favorite}>
+            <Button
+              variant="info"
+              className="ms-5 "
+              ref={btnRef}
+              onClick={() => {
+                onBtnClick(), favorite();
+              }}
+            >
               <FaHeart style={{ color: "red" }}></FaHeart> Favorite
             </Button>
           </Card.Body>
